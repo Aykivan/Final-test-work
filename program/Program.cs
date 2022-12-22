@@ -11,16 +11,12 @@ void Print(string[] a)
 
 string[] Newarray(string[] oldarray)
 {
-    int size = 0;
-    for (int i = 0; i < oldarray.Length; i++) size++; // ищем переменную size, для того чтобы задать длину нового массива
-
-    string[] newa = new string[size];
-    for (int i = 0; i < oldarray.Length; i++) if (oldarray[i].Length <= 3) newa[i] = oldarray[i]; // задаем значения нового массива
-
+    string[] newa = new string[oldarray.Length];
+    for (int i = 0; i < oldarray.Length; i++) if (oldarray[i].Length <= 3) newa[i] = oldarray[i];
     return newa;
 }
 
-string[] array = { "dsa21", "f2q", "24q" };
+string[] array = { "dsa21", "f2q", "24q2" };
 System.Console.WriteLine("Элементы текущего массива: ");
 Print(array);
 
